@@ -93,7 +93,7 @@ var getUnanswered = function(tags) {
 								sort: 'creation'};
 
 	var result = $.ajax({
-		url: "http://api.stackexchange.com/2.2/questions/unanswered",
+		url: location.protocol+"//api.stackexchange.com/2.2/questions/unanswered",
 		data: request,
 		dataType: "jsonp",
 		type: "GET"
@@ -167,7 +167,7 @@ function getTopAnswers(tags) {
     var request = {site: 'stackoverflow' };
 
     var result = $.ajax({
-        url: "http://api.stackexchange.com/2.2/tags/"+tags+ "/top-answerers/"+period,
+        url: location.protocol+"//api.stackexchange.com/2.2/tags/"+tags+ "/top-answerers/"+period,
         data: request,
         dataType: "jsonp",
         type: "GET"
